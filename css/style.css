@@ -1,0 +1,581 @@
+/* Start Global Rules */
+
+:root {
+    --mainColor: #3d4449;
+    --secondColor: #f56a6a;
+    --thirdColor: #7f888f;
+
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*small screen*/
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/*medium screen*/
+@media(min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/*large screen*/
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+@media(max-width: 767px) {
+    .header .container {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+}
+.header .container::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    bottom: 0;
+    border-bottom: 2px solid var(--secondColor);
+}
+.header .logo {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainColor);
+    font-size: 26px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.header .logo:hover {
+    color: var(--secondColor);
+}
+.header .logo span {
+    color: var(--thirdColor);
+    margin-left: 5px;
+    font-size: 16px;
+}
+.header .icons {
+    display: flex;
+    gap: 30px;
+}
+.header .icons a {
+    color: var(--thirdColor);
+    transition: 0.3s;
+}
+.header .icons a:hover {
+    color: var(--secondColor);
+}
+.header .icons {
+    font-size: 22px;
+}
+/* End Header */
+
+/* Start landing */
+.landing {
+    height: calc(100vh - 72px);
+    padding-top: 40px;
+}
+.landing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+}
+@media(max-width: 991px) {
+    .landing .container {
+        flex-direction: column;
+    }
+}
+.landing .text {
+    flex-basis: 50%;
+}
+.landing .text h1 {
+    font-size: 65px;
+    color: var(--mainColor);
+    margin: 0 0 30px;
+}
+.landing .text p:first-of-type {
+    color: var(--thirdColor);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.landing .text p:last-of-type {
+    line-height: 1.6;
+    color: var(--thirdColor);
+    margin-bottom: 40px;
+}
+.landing .text a {
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+    padding: 15px 20px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+.landing .text a:hover {
+    background-color: var(--secondColor);
+    color: white;
+    border: none;
+}
+.landing img {
+    flex-basis: 50%;
+}
+@media(max-width: 991px) {
+    .landing img {
+        display: none;
+    }
+}
+/* End landing */
+
+/* Start Section */
+.section {         
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.main-heading {
+    color: var(--mainColor);
+    font-weight: bold;
+    font-size: 30px;
+    width: fit-content;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--secondColor);
+}
+.section .boxs {
+    display: flex;
+    gap: 30px;
+}
+@media(max-width: 767px) {
+    .section .boxs {
+        flex-direction: column;
+    }
+}
+.section .boxs .box-one {
+    flex-basis: 50%;
+}
+.section .boxs .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+@media(max-width: 767px) {
+    .section .box {
+        flex-direction: column;
+    }
+}
+.section .box div:first-of-type {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--thirdColor);
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.section .box:hover div:first-of-type {
+    background-color: var(--secondColor);
+    border: none;
+}
+.section .box i {
+    color: var(--secondColor);
+    font-size: 30px;
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+.section .box:hover i {
+    color: white;
+    transform: rotate(315deg);
+}
+.section .box .text {
+    line-height: 2;
+    padding: 20px;
+}
+@media(max-width: 767px) {
+    .section .box .text {
+        text-align: center;
+        width: 100%;
+    }
+}
+.section .box .text h3 {
+    color: var(--mainColor);
+}
+.section .box .text {
+    color: var(--thirdColor);
+    line-height: 1.6;
+}
+/* End Section */
+
+/* Start Second */
+.second {
+    padding-top: 100px;
+}
+.second .boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 767px) {
+    .second .boxs {
+        flex-direction: column;
+    }
+}
+.second .boxs .box {
+    width: calc(50% - 20px);
+    padding-bottom: 50px;
+}
+@media(max-width: 767px) {
+    .second .boxs .box {
+        width: 100%;
+        text-align: center;
+    }
+}
+.second .boxs .box a img {
+    border-radius: 12px;
+}
+@media(max-width: 991px) {
+    .second .boxs .box a img {
+            width: 350px;
+        }
+}
+@media(max-width: 991px) {
+    .second .boxs .box a img {
+        width: 175px;
+    }
+}
+.second .boxs .box h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.second .boxs .box p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--thirdColor);
+}
+.second .boxs .box a:last-child {
+    width: 416px;
+    transition: 0.3s;
+    color: var(--secondColor);
+}
+.second .boxs .box a:last-child:hover {
+    color: var(--thirdColor);
+}
+/* End Second */
+
+/* Start Generic */
+.main-text .main-heading {
+    padding-top: 70px;
+    border: none;
+}
+.main-text img {
+    width: 100%;
+    margin-bottom: 60px;
+    border-radius: 6px;
+}
+.main-text p {
+    line-height: 1.6;
+    color: var(--thirdColor);
+    margin-bottom: 30px;
+}
+/* End Generic */
+
+/* Start Elements */
+.elelanding .main-heading {
+    padding-top: 50px;
+    font-size: 60px;
+    border: none;
+}
+.elelanding .texts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+}
+.elelanding .text {
+    color: var(--mainColor);
+}
+.elelanding .text h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.elelanding .text p {
+    color: var(--thirdColor);
+    line-height: 1.6;
+}
+.section-one {
+    padding: 100px 0;
+}
+.section-one .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 40px;
+}
+.section-one .main .left {
+    line-height: 1.6;
+    padding: 0px 20px;
+    box-shadow: 0 10px 15px #00000024;
+}
+.section-one .main .left .text {
+    margin-bottom: 30px;
+    color: var(--thirdColor);
+}
+.section-one .main .left .text h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: var(--mainColor);
+}
+.section-one .main .left .text b,
+.section-one .main .left .text strong,
+.section-one .main .left .text i,
+.section-one .main .left .text sup,
+.section-one .main .left .text sub,
+.section-one .main .left .text u,
+.section-one .main .left .text code {
+    color: var(--mainColor);
+}
+.section-one .main .left .text code {
+    background-color: silver;
+    padding: 2px;
+    border-radius: 3px;
+}
+.section-one .main .left .text a {
+    color: var(--secondColor);
+}
+.section-one .main .left .heading {
+    padding: 20px 0;
+}
+.section-one .main .left .heading h2,
+.section-one .main .left .heading h3,
+.section-one .main .left .heading h4 {
+    margin-bottom: 15px;
+}
+.section-one .main .left .heading p {
+    margin-top: 15px;
+    color: var(--thirdColor);
+}
+.section-one .main .right {
+    line-height: 1.6;
+    padding: 0px 20px;
+    box-shadow: 0 10px 15px #00000024;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-one .main .right div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section-one .main .right  div button {
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: var(--secondColor);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.section-one .main .right button:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+.section-one .main .right .one button:last-child {
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+}
+.section-one .main .right .two button:first-child {
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+    padding: 20px 40px;
+}
+.section-one .main .right .two button:nth-child(2){
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+    font-size: 15px;
+}
+.section-one .main .right .two button:last-child{
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.section-one .main .right .three button:first-child {
+    padding: 20px 40px;
+}
+.section-one .main .right .three button:nth-child(2){
+    font-size: 15px;
+}
+.section-one .main .right .three button:last-child{
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.section-one .main .right .four button:first-child {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+.section-one .main .right .four button:last-child{
+    flex-grow: 1;
+    background-color: white;
+        color: var(--secondColor);
+        border: 1px solid var(--secondColor);
+}
+.section-one .main .right .five button:first-child {
+    flex-grow: 1;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.section-one .main .right .five button:last-child{
+    flex-grow: 1;
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor);
+    font-size: 12px;
+}
+.section-one .main .right .six button:first-child i,
+.section-one .main .right .six button:last-child i {
+    margin-right: 10px;
+}
+.section-one .main .right .six button:last-child{
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor)
+}
+.section-one .main .right .seven button:first-child,
+.section-one .main .right .seven button:last-child {
+    opacity: 0.2;
+}
+.section-one .main .right .seven button:last-child {
+    background-color: white;
+    color: var(--secondColor);
+    border: 1px solid var(--secondColor)
+}
+.section-one .main .left,
+.section-one .main .right {
+    transition: 0.3s;
+}
+.section-one .main .left:hover,
+.section-one .main .right:hover {
+    transform: scale(1.1);
+}
+.section-two {
+    padding: 100px 0;
+}
+.section-two .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-two .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.section-two .list h3 {
+    padding: 30px;
+    position: relative;
+    top: -35px;
+}  
+.section-two .list ul h4, 
+.section-two .list ol h4 {
+    font-size: 16px;
+    margin: 0 0 20px;
+    padding: 0;
+}
+.section-two .list ul li {
+    list-style: circle ;
+    margin: 10px 0 10px 30px;
+}
+.section-two .list ol li {
+    margin: 10px 0 10px 30px;
+}
+.section-two form {
+    flex-basis: 50%;
+}
+.section-two form h3{
+    margin-bottom: 20px;
+}
+.section-two form h3{
+    margin-bottom: 20px;
+}
+.section-two form .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.section-two form .field input {
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--thirdColor);
+}
+.section-two form select {
+    width: 100%;
+    padding: 15px 15px;
+    color: var(--thirdColor);
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+.section-two form .radio {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.section-two form .radio input, 
+.section-two form .radio label {
+    cursor: pointer;
+    margin-right: 20px;
+    color: var(--thirdColor);
+    font-size: 20px;
+}
+.section-two form .radio input {
+    color: var(--mainColor);
+}
+/* End Elements */
